@@ -15,11 +15,26 @@
         <section>
             <p>Bitte geben Sie ihre Postleitzahl ein:</p>
 
-            <form>
+            <form onsubmit="return Abgleich()">
                 <label for="Postleitzahl">Postleitzahl:</label>
-                <input type="text" id="Postleitzahl" name="Postleitzahl">
-                <input type="submit" value="Okay">
+                <input type="text" id="Postleitzahl" name="Postleitzahl"><br>
+                <input type="submit" value="Bestätigen" name="Bestätigen" >
             </form>
+
+            <script type="text/javascript">
+                function Abgleich(){
+                    let message=document.getElementById("Postleitzahl").value;
+                    if (message.startsWith("99")) {
+                    window.location.href = "Dateneingabe.html";
+                    return false;
+                    } else {
+                    alert("Innerhalb Ihres Wohnortes wird leider keine Abholung angeboten");
+                    }
+                    return false;
+                }
+            </script>
+
+            
         </section>
     </main>
 
