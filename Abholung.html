@@ -17,7 +17,7 @@
 
             <form onsubmit="return Abgleich()">
                 <label for="Postleitzahl">Postleitzahl:</label>
-                <input type="text" id="Postleitzahl" name="Postleitzahl"><br>
+                <input type="text" id="Postleitzahl" name="Postleitzahl" maxlength="5" pattern="[0-9]{5}" title="Bitte geben Sie nur Zahlen von 0 bis 9 ein"><br>
                 <input type="submit" value="Bestätigen" name="Bestätigen" >
             </form>
 
