@@ -34,51 +34,64 @@
         </h1>
         </section>
         <section>
-            <form>
+            <form id="eingabe">
                 <label for="fName">Vornamen</label>
-                <input type="text" id="fName" name="Vorname">
+                <input type="text" id="fName" name="Vorname"><br>
                 <label for="lName">Nachname</label>
-                <input type="text" id="lName" name="Nachname">
+                <input type="text" id="lName" name="Nachname"><br>
                 <label for="Straße">Straße und Hausnummer</label>
-                <input type="text" id="Straße" name="Straße und Hausnummer">
+                <input type="text" id="Straße" name="Straße und Hausnummer"><br>
                 <label for="PLZ">Postleitzahl</label>
-                <input type="text" id="PLZ" name="Postleitzahl">
+                <input type="text" id="PLZ" name="Postleitzahl"><br>
                 <label for="Ort">Ort</label>
-                <input type="text" id="Ort" name="Ort">
-            </form>
-        </section>
-        <Sektion>
-            <p>Welche Art der Kleidung möchten Sie Spenden?</p>
-
-            <form>
+                <input type="text" id="Ort" name="Ort"><br>
+                <br>
+                <p>Welche Art der Kleidung möchten Sie Spenden?</p>
+                <br>
                 <label for="T shirts">T Shirts</label>
-                <input type="number" id="Tshirts" name="T Shirts" min="0">
+                <input type="number" id="Tshirts" name="T Shirts" min="0"><br>
                 <label for="Hosen">Hosen</label>
-                <input type="number" id="Hosen" name="Hosen" min="0">
+                <input type="number" id="Hosen" name="Hosen" min="0"><br>
                 <label for="Jacken">Jacken</label>
-                <input type="number" id="Jacken" name="Jacken" min="0">
+                <input type="number" id="Jacken" name="Jacken" min="0"><br>
                 <label for="Kleider">Kleider</label>
-                <input type="number" id="Kleider" name="kleider" min="0">
+                <input type="number" id="Kleider" name="kleider" min="0"><br>
                 <label for="Sonstiges">Sonstiges</label>
-                <input type="number" id="Sonstiges" name="Sonstiges" min="0">
-            </form>
-        </Sektion>
-        <section>
-            <p>Bitte wählen Sie das Krisengebiet, in welchem Ihre Spende helfen soll:</p>
-
-            <form id="Krisengebiet">
-                <input type="radio" id="Ukraine" name="Krisengebiet" value="Ukraine">
+                <input type="number" id="Sonstiges" name="Sonstiges" min="0"><br>
+                <br>
+                <p>Bitte wählen Sie das Krisengebiet, in welchem Ihre Spende helfen soll:</p>
+                <br>
                 <label for="Ukraine">Ukraine</label>
-                <input type="radio" id="Israel" name="Krisengebiet" value="Israel">
+                <input type="radio" id="Ukraine" name="Krisengebiet" value="Ukraine"><br>
                 <label for="Israel">Israel</label>
-                <input type="radio" id="Syrien" name="Krisengebiet" value="Syrien">
+                <input type="radio" id="Israel" name="Krisengebiet" value="Israel"><br>
                 <label for="Syrien">Syrien</label>
-                <input type="radio" id="Afghanistan" name="Krisengebiet" value="Afghanistan">
+                <input type="radio" id="Syrien" name="Krisengebiet" value="Syrien"><br>
                 <label for="Afghanistan">Afghanistan</label>
-                <input type="radio" id="Nigeria" name="Krisengebiet" value="Nigeria">
+                <input type="radio" id="Afghanistan" name="Krisengebiet" value="Afghanistan"><br>
                 <label for="Nigeria">Nigeria</label>
+                <input type="radio" id="Nigeria" name="Krisengebiet" value="Nigeria"><br>
+                <br>
+                <button type="submit">Bestätigen</button>
             </form>
         </section>
+
+        <script type="text/javascript">
+            document.getElementById("eingabe").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const bestätigung = new FormData(event.target);
+            const quittung = {};
+
+            bestätigung.forEach((value, key) =>{
+                quittung[key] = value;
+            });
+
+            sessionStorage.setItem("bestätigung", JSON.stringify(quittung));
+
+            window.location.href = "Bestätigung.html";
+            });
+         </script>
     </main>
 
     <footer>

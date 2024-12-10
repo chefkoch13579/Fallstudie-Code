@@ -20,35 +20,21 @@
         </nav>
     </header>
     <main>
+        <p id="Ende"></p>
+        <p>Vielen Dank für Ihre Spende</p>
         <script type="text/javascript">
-            const Bestätigungkurz ={
-                Ziel:getElementById("Krisengebiet").value,
-                Spenden: {
-                    TShirts: document.getElementById("Tshirts").value,
-                    Hosen: document.getElementById("Hosen").value,
-                    Jacken: document.getElementById("Jacken").value,
-                    Kleider: document.getElementById("Kleider").value,
-                    Sonstiges: document.getElementById("Sonstiges").value,
-                }
+            
+            const Spende = sessionStorage.getItem("bestätigung");
+
+            if(Spende){
+                const Ausgabe = JSON.parse(Spende);
+                document.getElementById("Ende").textContent =JSON.stringify(Ausgabe, null, 2);
             }
-
-            const Bestätigunglang={
-                fName:getElementById("fName").value,
-                lName:getElementById("lName").value,
-                Straße:getElementById("Straße").valie,
-                PLZ:getElementById("PLZ").value,
-                Ort:getElementById("Ort").value,
-                Ziel:getElementById("Krisengebiet").value,
-                Spenden: {
-                    TShirts: document.getElementById("Tshirts").value,
-                    Hosen: document.getElementById("Hosen").value,
-                    Jacken: document.getElementById("Jacken").value,
-                    Kleider: document.getElementById("Kleider").value,
-                    Sonstiges: document.getElementById("Sonstiges").value,
-                }
-
+            else{
+                document.getElementById("Ende").textContent="keine Daten übermittelt.";
             }
         </script>
+
     </main>
 
 
