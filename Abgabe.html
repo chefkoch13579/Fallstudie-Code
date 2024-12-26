@@ -19,15 +19,20 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <nav>
-            <ul>
-                <li><a href= "Kleiderspende eV.html"> Home</a></li>
-                <li><a href= "Historie.html"> Über den Verein</a></li>
-                <li><a href= "Vorstand.html"> Vorstand</a></li>
-                <li><a href= "Kleidung spenden.html"> Kleidung Spenden</a></li>
-            </ul>
-        </nav>
+    <body>
+        <div class="row">
+            <div class="col-sm-4">
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href= "Kleiderspende eV.html"> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Historie.html"> Über den Verein</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Vorstand.html"> Vorstand</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Kontakt.html"> Kontakt</a> </li>
+                        <li class="nav-item"><a class="nav-link" href= "Kleidung spenden.html"> Kleidung Spenden</a></li>
+                    </ul>
+                </nav>
+            </div>
+
         <section>
             <p>Welche Art der Kleidung möchten Sie Spenden?</p>
 
@@ -59,26 +64,26 @@
                 <button type="submit">Bestätigen</button>
             </form>
         </section>
+        </div>
 
         <script type="text/javascript">
             document.getElementById("eingabe").addEventListener("submit", function(event){
             event.preventDefault();
 
-            const bestätigungKurz = new FormData(event.target);
+            const bestätigung = new FormData(event.target);
             const quittung = {};
 
-            bestätigungKurz.forEach((value, key) =>{
+            bestätigung.forEach((value, key) =>{
                 quittung[key] = value;
             });
 
-            sessionStorage.setItem("bestätigungKurz", JSON.stringify(quittung));
-            console.log("gespeicherte Daten:", quittung);
+            sessionStorage.setItem("bestätigung", JSON.stringify(quittung));
 
             window.location.href = "Bestätigung.html";
             });
          </script>
     
-    </main>
+        </body>
 
     <footer>
         <nav>

@@ -19,40 +19,46 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <nav>
-            <ul>
-                <li><a href= "Kleiderspende eV.html"> Home</a></li>
-                <li><a href= "Historie.html"> Über den Verein</a></li>
-                <li><a href= "Vorstand.html"> Vorstand</a></li>
-                <li><a href= "Kleidung spenden.html"> Kleidung Spenden</a></li>
-            </ul>
-        </nav>
+    <body>
+        <div class="row">
+            <div class="col-sm-4">
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href= "Kleiderspende eV.html"> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Historie.html"> Über den Verein</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Vorstand.html"> Vorstand</a></li>
+                        <li class="nav-item"><a class="nav-link" href= "Kontakt.html"> Kontakt</a> </li>
+                        <li class="nav-item"><a class="nav-link" href= "Kleidung spenden.html"> Kleidung Spenden</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <section>
-            <p>Bitte geben Sie ihre Postleitzahl ein:</p>
+            <div class="col-sm-8">
+                <p>Bitte geben Sie ihre Postleitzahl ein:</p>
 
-            <form onsubmit="return Abgleich()">
-                <label for="Postleitzahl">Postleitzahl:</label>
-                <input type="text" id="Postleitzahl" name="Postleitzahl" maxlength="5" pattern="[0-9]{5}" title="Bitte geben Sie nur Zahlen von 0 bis 9 ein"><br>
-                <input type="submit" value="Bestätigen" name="Bestätigen" >
-            </form>
+                <form onsubmit="return Abgleich()">
+                    <label for="Postleitzahl">Postleitzahl:</label>
+                    <input type="text" id="Postleitzahl" name="Postleitzahl" maxlength="5" pattern="[0-9]{5}" title="Bitte geben Sie nur Zahlen von 0 bis 9 ein"><br>
+                    <input type="submit" value="Bestätigen" name="Bestätigen" >
+                </form>
 
-            <script type="text/javascript">
-                function Abgleich(){
-                    let message=document.getElementById("Postleitzahl").value;
-                    if (message.startsWith("99")) {
-                    window.location.href = "Dateneingabe.html";
-                    return false;
-                    } else {
-                    alert("Innerhalb Ihres Wohnortes wird leider keine Abholung angeboten");
+                <script type="text/javascript">
+                    function Abgleich(){
+                        let message=document.getElementById("Postleitzahl").value;
+                        if (message.startsWith("99")) {
+                        window.location.href = "Dateneingabe.html";
+                        return false;
+                        } else {
+                        alert("Innerhalb Ihres Wohnortes wird leider keine Abholung angeboten");
+                        }
+                        return false;
                     }
-                    return false;
-                }
-            </script>
+                </script>
 
-        </section>
-    </main>
+            </div>
+        </div>
+    </body>
+
     <footer>
         <nav>
             <ul class="nav justify-content-end">

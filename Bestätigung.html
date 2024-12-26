@@ -19,7 +19,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <body>
         <p id="Ende"></p>
         <p>Vielen Dank für Ihre Spende</p>
         <script type="text/javascript">
@@ -28,14 +28,14 @@
 
             if(Spende){
                 const Ausgabe = JSON.parse(Spende);
-                document.getElementById("Ende").textContent =JSON.stringify(Ausgabe, null, 2);
+                document.getElementById("Ende").textContent =JSON.stringify(Ausgabe, null, "\t");
             }
             else{
                 document.getElementById("Ende").textContent="keine Daten übermittelt.";
             }
         </script>
 
-    </main>
+    </body>
 
 
 
