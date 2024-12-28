@@ -33,37 +33,57 @@
                 </nav>
             </div>
 
-        <section>
-            <p>Welche Art der Kleidung möchten Sie Spenden?</p>
+            <div class="col-sm-8">
+                <p>Welche Art der Kleidung möchten Sie Spenden?</p>
 
-            <form id="eingabe">
-                <label for="T shirts">T Shirts</label>
-                <input type="number" id="Tshirts" name="T Shirts" min="0" required><br>
-                <label for="Hosen">Hosen</label>
-                <input type="number" id="Hosen" name="Hosen" min="0" required><br>
-                <label for="Jacken">Jacken</label>
-                <input type="number" id="Jacken" name="Jacken" min="0" required><br>
-                <label for="Kleider">Kleider</label>
-                <input type="number" id="Kleider" name="kleider" min="0" required><br>
-                <label for="Sonstiges">Sonstiges</label>
-                <input type="number" id="Sonstiges" name="Sonstiges" min="0" required><br>
-                <br>
-                <p>Bitte wählen Sie das Krisengebiet, in welchem Ihre Spende helfen soll:</p>
-                <br>
-                <label for="Ukraine">Ukraine</label>
-                <input type="radio" id="Ukraine" name="Krisengebiet" value="Ukraine"><br>
-                <label for="Israel">Israel</label>
-                <input type="radio" id="Israel" name="Krisengebiet" value="Israel"><br>
-                <label for="Syrien">Syrien</label>
-                <input type="radio" id="Syrien" name="Krisengebiet" value="Syrien"><br>
-                <label for="Afghanistan">Afghanistan</label>
-                <input type="radio" id="Afghanistan" name="Krisengebiet" value="Afghanistan"><br>
-                <label for="Nigeria">Nigeria</label>
-                <input type="radio" id="Nigeria" name="Krisengebiet" value="Nigeria"><br>
-                <br>
-                <button type="submit">Bestätigen</button>
-            </form>
-        </section>
+                <form id="eingabe">
+                    <div class="mb-3">
+                        <label for="T shirts" class="form-label">T Shirts</label>
+                        <input type="number" class="form-control" id="Tshirts" name="T Shirts" min="0" required><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Hosen" class="form-label">Hosen</label>
+                        <input type="number" class="form-control" id="Hosen" name="Hosen" min="0" required><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Jacken" class="form-label">Jacken</label>
+                        <input type="number" class="form-control" id="Jacken" name="Jacken" min="0" required><br>
+                    </div>
+                    <div class="mb-3">    
+                        <label for="Kleider" class="form-label">Kleider</label>
+                        <input type="number" class="form-control" id="Kleider" name="kleider" min="0" required><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Sonstiges" class="form-label">Sonstiges</label>
+                        <input type="number" class="form-control" id="Sonstiges" name="Sonstiges" min="0" required><br>
+                    </div>
+                    <br>
+                    <p>Bitte wählen Sie das Krisengebiet, in welchem Ihre Spende helfen soll:</p>
+                    <br>
+                    <div class="form-check">
+                        <label for="Ukraine" class="form-check-label">Ukraine</label>
+                        <input class="form-check-input" type="radio" id="Ukraine" name="Krisengebiet" value="Ukraine"><br>
+                    </div>
+                    <div class="form-check">
+                        <label for="Israel" class="form-check-label">Israel</label>
+                        <input class="form-check-input" type="radio" id="Israel" name="Krisengebiet" value="Israel"><br>
+                    </div>
+                    <div class="form-check">
+                        <label for="Syrien" class="form-check-label">Syrien</label>
+                        <input class="form-check-input" type="radio" id="Syrien" name="Krisengebiet" value="Syrien"><br>
+                    </div>
+                    <div class="form-check">
+                        <label for="Afghanistan" class="form-check-label">Afghanistan</label>
+                        <input class="form-check-input" type="radio" id="Afghanistan" name="Krisengebiet" value="Afghanistan"><br>
+                    </div>
+                    <div class="form-check">
+                        <label for="Nigeria" class="form-check-label">Nigeria</label>
+                        <input class="form-check-input" type="radio" id="Nigeria" name="Krisengebiet" value="Nigeria"><br>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Bestätigen</button>
+                </form>
+            </div>
         </div>
 
         <script type="text/javascript">
