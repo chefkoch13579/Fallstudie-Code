@@ -40,15 +40,15 @@
             <form id="eingabe">
                 <div class="mb-3">
                     <label for="fName" class="form-label">Vornamen</label>
-                    <input type="text" class="form-control" id="fName" name="Vorname"><br>
+                    <input type="text" class="form-control" id="fName" name="Vorname" pattern="[A-Za-z]" title="Bitte geben Sie nur Buchstaben ein." required><br>
                     <label for="lName" class="form-label">Nachname</label>
-                    <input type="text" class="form-control" id="lName" name="Nachname"><br>
+                    <input type="text" class="form-control" id="lName" name="Nachname" pattern="[A-Za-z]" title="Bitte geben Sie nur Buchstaben ein." required><br>
                     <label for="Straße" class="form-label">Straße und Hausnummer</label>
-                    <input type="text" class="form-control" id="Straße" name="Straße und Hausnummer"><br>
+                    <input type="text" class="form-control" id="Straße" name="Straße und Hausnummer" pattern="[A-Za-z][0-9]" title="Bitte geben Sie nur ihre Straße und die passende Hausnummer ein." required><br>
                     <label for="PLZ" class="form-label">Postleitzahl</label>
-                    <input type="text" class="form-control" id="PLZ" name="Postleitzahl"><br>
+                    <input type="text" class="form-control" id="PLZ" name="Postleitzahl" maxlength="5" pattern="[0-9]{5}" title="Bitte geben Sie nur Zahlen von 0 bis 9 ein" required><br>
                     <label for="Ort" class="form-label">Ort</label>
-                    <input type="text" class="form-control" id="Ort" name="Ort"><br>
+                    <input type="text" class="form-control" id="Ort" name="Ort" pattern="[A-Za-z]" title="Bitte geben Sie nur Buchstaben ein." required><br>
                 </div>
                 <br>
                 <p>Welche Art der Kleidung möchten Sie Spenden?</p>
