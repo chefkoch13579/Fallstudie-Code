@@ -20,23 +20,49 @@
         </nav>
     </header>
     <body>
-        <p id="Ende"></p>
-        <p>Vielen Dank für Ihre Spende</p>
-        <script type="text/javascript">
-            
-            const Spende = sessionStorage.getItem("bestätigung");
+        <div class="row">
+                <div class="col-sm-4">
+                    <nav>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href= "Kleiderspende eV.html"> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href= "Historie.html"> Über den Verein</a></li>
+                            <li class="nav-item"><a class="nav-link" href= "Vorstand.html"> Vorstand</a></li>
+                            <li class="nav-item"><a class="nav-link" href= "Kontakt.html"> Kontakt</a> </li>
+                            <li class="nav-item"><a class="nav-link" href= "Kleidung spenden.html"> Kleidung Spenden</a></li>
+                        </ul>
+                    </nav>
+                </div>
+  
+                <div class="col-sm-8">
+                <h1>Hier Ihre Eingaben auf einem Blick</h1>
 
-            if(Spende){
-                const Ausgabe = JSON.parse(Spende);
-                document.getElementById("Ende").textContent =JSON.stringify(Ausgabe, null, "\t");
-            }
-            else{
-                document.getElementById("Ende").textContent="keine Daten übermittelt.";
-            }
-        </script>
+                <p id="Ende"></p><br>
+                <p>Vielen Dank für Ihre Spende</p>
+
+                    <script type="text/javascript">
+                    const Spende = sessionStorage.getItem("bestätigung");
+
+                     if(Spende){
+                            const Ausgabe = JSON.parse(Spende);
+                            document.getElementById("Ende").textContent=JSON.stringify(Ausgabe, null, "\t"); 
+                        }
+                    else{
+                            document.getElementById("Ende").textContent="keine Daten übermittelt.";
+                        }
+                    </script>
+                </div>
+        </div>
 
     </body>
 
+    <footer>
+        <nav>
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a class="nav-link" href= "Impressum.html"> Impressum</a></li>
+                <li class="nav-item"><a class="nav-link" href= "Datenschutz.html"> Datenschutz</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 
 </html>
