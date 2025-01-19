@@ -37,7 +37,11 @@
                 <h1>Hier Ihre Eingaben auf einem Blick</h1>
 
                 <p id="Ende"></p><br>
-                <p>Vielen Dank für Ihre Spende</p>
+                <p>Vielen Dank für Ihre Spende</p><br>
+                <br>
+                <p>Ort: Weimar</p>
+                <p id="datum"></p>
+
 
                     <script type="text/javascript">
                     const Spende = sessionStorage.getItem("bestätigung");
@@ -49,6 +53,10 @@
                     else{
                             document.getElementById("Ende").textContent="keine Daten übermittelt.";
                         }
+                    </script>
+                    <script type="text/javascript">
+                        const date = new Date();
+                        document.getElementById("datum").innerHTML=date; 
                     </script>
                 </div>
         </div>
